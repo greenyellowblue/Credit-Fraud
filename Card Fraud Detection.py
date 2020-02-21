@@ -50,8 +50,7 @@ Y = data[target]
 state = 1  # define random state
 classifiers = {  # define outlier detection method
     "Isolation Forest": IsolationForest(max_samples=len(X), contamination=outlier_frac, random_state=state),
-    "Local Outlier Factor": LocalOutlierFactor(n_neighbors=20, contamination=outlier_frac),
-    "One-Class SVM": svm.OneClassSVM(nu=outlier_frac, kernel="rbf", gamma=0.1)
+    "Local Outlier Factor": LocalOutlierFactor(n_neighbors=20, contamination=outlier_frac)
 }
 
 
